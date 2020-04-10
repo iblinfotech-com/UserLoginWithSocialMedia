@@ -55,6 +55,12 @@ namespace External_Login_Identity
                 ClientSecret = "TThKiav35q_E0Vr3L-ZYv2oD",
                 Provider = new GoogleOAuth2AuthenticationProvider()
             });
+
+            //Facebook Login
+            app.UseFacebookAuthentication(
+              appId: "3249958491685937",
+              appSecret: "f46f83be24c9eeefc9093bde799d7d09");
+
         }
     }
 }
