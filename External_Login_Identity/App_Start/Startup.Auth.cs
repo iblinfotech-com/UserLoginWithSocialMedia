@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 using External_Login_Identity.Models;
+using Microsoft.Owin.Security.Google;
 
 namespace External_Login_Identity
 {
@@ -46,6 +47,14 @@ namespace External_Login_Identity
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
+
+              //Google Login
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "1041135839438-oj7r29jpmt9ce775uv2t5t2mvhlqaup0.apps.googleusercontent.com",
+                ClientSecret = "TThKiav35q_E0Vr3L-ZYv2oD",
+                Provider = new GoogleOAuth2AuthenticationProvider()
+            });
         }
     }
 }
