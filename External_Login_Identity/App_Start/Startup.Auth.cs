@@ -61,6 +61,11 @@ namespace External_Login_Identity
               appId: "3249958491685937",
               appSecret: "f46f83be24c9eeefc9093bde799d7d09");
 
+            //Microsoft Login
+            app.UseMicrosoftAccountAuthentication(
+               clientId: "69a87cb8-56e3-408e-83ea-5e6d64a4c0cf",
+               clientSecret: "VN7B_DH7Av:moS4UA2MyUy/yWLm?O=T-");
+
         }
     }
 }
